@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mybatis 配置项头 -->
+<!DOCTYPE configuration     
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"     
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">  
+<configuration> 
+	<typeAliases>
+		<typeAlias type="com.entity.User" alias="user"/>
+	</typeAliases>
+	<!-- pagehelper分页插件 要写在map前面 -->
+	<plugins>
+		<plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+	</plugins>
+	
+	<mappers>
+		<mapper resource="com/mybatis/mappers/user.xml"/>
+	</mappers>
+</configuration>  
