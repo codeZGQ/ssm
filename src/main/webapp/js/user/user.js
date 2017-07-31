@@ -1,3 +1,8 @@
+
+window.onload = function() {
+	var val = $("input[type='hidden']").val();
+	$('select:eq(0)').val(val);
+}
 $(function() {
 	function pages(page) {
 		$.post(
@@ -17,11 +22,6 @@ $(function() {
 			},
 			"json"
 		)
-	}
-
-	window.onload = function() {
-		var val = $("input[type='hidden']").val();
-		$('select:eq(0)').val(val);
 	}
 
 	$("#last").click(function() {
