@@ -21,10 +21,6 @@ public class LoginAction {
 	@RequestMapping("/login")
 	public String login(User user){
 		user = userService.getUser(user);
-		
-		
-		
-		
 		if(user!=null){
 			return "success";
 		}else{
