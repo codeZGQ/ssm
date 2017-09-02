@@ -13,6 +13,11 @@ public class LoginAction {
 	@Autowired
 	private IUserService userService;
 	
+	/**
+	 * 用户登录
+	 * @param user
+	 * @return
+	 */
 	@RequestMapping("/login")
 	public String login(User user){
 		user = userService.getUser(user);
