@@ -20,7 +20,11 @@
 	</select>
 	
 	
-	
+	<insert id="addUser" parameterType="User">
+		<selectKey keyProperty="userId" order="BEFORE" resultType="java.lang.Integer">
+			select USER_ID_SEQ.NEXTVAL as userId from DUAL
+		</selectKey>
+	</insert>
 	
 	
 	<sql id="all">

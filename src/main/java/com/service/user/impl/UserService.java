@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.dao.user.IUserDao;
 import com.entity.User;
 import com.service.user.IUserService;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UserService implements IUserService{
@@ -18,6 +19,7 @@ public class UserService implements IUserService{
 	@Resource
 	private IUserDao userDao;
 	
+	@Transactional
 	public User getUser(User user) {
 		String pwd = user.getPwd();
 		user = userDao.getUser(user);
